@@ -646,6 +646,7 @@
 		DB3AACA71C27FF5F00378E8E = {
 			isa = PBXGroup;
 			children = (
+				DBF344F11C2A75AE002BC53A /* Example */,
 				DB3AACB21C27FF5F00378E8E /* AJDevFramework */,
 				DB3AACCC1C27FF5F00378E8E /* AJDevFrameworkTests */,
 				DB3AACD71C27FF5F00378E8E /* AJDevFrameworkUITests */,
@@ -758,6 +759,13 @@
 				DBF344E91C2A50E1002BC53A /* CorePagesViewConfig.m */,
 			);
 			path = CorePageView;
+			sourceTree = "<group>";
+		};
+		DBF344F11C2A75AE002BC53A /* Example */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Example;
 			sourceTree = "<group>";
 		};
 		E6A563829A226B765DC76C62 /* Frameworks */ = {
