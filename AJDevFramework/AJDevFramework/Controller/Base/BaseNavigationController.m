@@ -17,8 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    self.navigationBar.barStyle = UIBarStyleBlack;
-//    self.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationBar.tintColor = [UIColor whiteColor];
 //    self.navigationBar.translucent = NO;
     self.navigationBar.barTintColor = NAVIGATION_BAR_TINT_COLOR;
 //    UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];

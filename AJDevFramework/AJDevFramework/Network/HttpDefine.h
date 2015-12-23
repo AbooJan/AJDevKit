@@ -15,7 +15,7 @@
 #define SUCCESS_CODE          0
 #define FAILURE_CODE          1
 
-#define HOST        @"http://192.168.1.1"
+#define HOST        @"http://apis.baidu.com"
 #define CDN_URL     @"http://192.168.1.1"
 
 #endif /* HttpDefine_h */

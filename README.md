@@ -46,11 +46,20 @@ AppStore评分封装库    		| iRate 		     | `1.11.4`
 ---
 
 #### 关于网络框架
+
 项目中使用的网络框架是基于[YTKNetowrk](https://github.com/yuantiku/YTKNetwork) 和 [MJExtension](https://github.com/CoderMJLee/MJExtension) 封装，将原来 `YTKNetowrk`  中的请求参数和返回JSON解析交给了  `MJExtension`  框架处理。
 
 [YTKNetowrk框架基础教程](BasicGuide.md)
 
 [YTKNetowrk框架高级教程](ProGuide.md)
+
+---
+
+* 所有请求数据bean必须继承自 `RequestBeanBase` 
+* 所有返回数据结果Bean必须继承自 `ResponseBeanBase` 
+* 所有请求数据Bean命名规则：`RequestBean + 功能名称`。 例如登录请求数据Bean：`RequestBeanLogin`
+* 所有返回数据结果Bean命名必须与请求数据Bean命名一致，只是将 `RequestBean` 换成 `ResponseBean`。 例如登录结果数据Bean：`ResponseBeanLogin`
+
 
 ---
 

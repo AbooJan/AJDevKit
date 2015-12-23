@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "YTKNetworkConfig.h"
+#import "iRate.h"
 
 @interface AppDelegate ()
 
@@ -22,6 +23,10 @@
     YTKNetworkConfig *networkConfig = [YTKNetworkConfig sharedInstance];
     networkConfig.baseUrl = HOST;
 //    networkConfig.cdnUrl = CDN_URL;
+    
+    // 配置评分框架
+    iRate *rate = [iRate sharedInstance];
+    rate.verboseLogging = NO;
     
     return YES;
 }

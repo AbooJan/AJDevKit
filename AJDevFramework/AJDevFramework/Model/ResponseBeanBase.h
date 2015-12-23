@@ -10,9 +10,10 @@
 
 @interface ResponseBeanBase : NSObject
 
-#warning !!!!temp param name
-@property (assign, nonatomic) NSInteger code;
-@property (copy, nonatomic) NSString *msg;
+#warning !!!!! temp param
+
+@property (nonatomic, assign) NSInteger errNum;
+@property (nonatomic, copy) NSString *retMsg;
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName;
 @end

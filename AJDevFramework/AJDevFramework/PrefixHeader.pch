@@ -18,5 +18,7 @@
 #import "ToolUtils.h"
 #import "MJExtension.h"
 #import "HttpDefine.h"
+#import "metamacros.h"
+#import "EXTScope.h"
 
 #endif /* PrefixHeader_pch */

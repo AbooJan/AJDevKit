@@ -94,6 +94,9 @@
 		DB3AACCE1C27FF5F00378E8E /* AJDevFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3AACCD1C27FF5F00378E8E /* AJDevFrameworkTests.m */; };
 		DB3AACD91C27FF5F00378E8E /* AJDevFrameworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3AACD81C27FF5F00378E8E /* AJDevFrameworkUITests.m */; };
 		DB3AACE91C2801E800378E8E /* NSTimer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3AACE81C2801E800378E8E /* NSTimer+Block.m */; };
+		DB4431041C2A8B71009FCA8E /* RequestSearchTel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4430FF1C2A8B71009FCA8E /* RequestSearchTel.m */; };
+		DB4431051C2A8B71009FCA8E /* ResponseSearchTel.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4431011C2A8B71009FCA8E /* ResponseSearchTel.m */; };
+		DB4431061C2A8B71009FCA8E /* TelInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4431031C2A8B71009FCA8E /* TelInfo.m */; };
 		DBF344EA1C2A50E1002BC53A /* CAAnimation+PagesViewBarShake.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF344DE1C2A50E1002BC53A /* CAAnimation+PagesViewBarShake.m */; };
 		DBF344EB1C2A50E1002BC53A /* CorePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF344E01C2A50E1002BC53A /* CorePageModel.m */; };
 		DBF344EC1C2A50E1002BC53A /* CorePagesBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF344E21C2A50E1002BC53A /* CorePagesBarBtn.m */; };
@@ -101,6 +104,9 @@
 		DBF344EE1C2A50E1002BC53A /* CorePagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF344E61C2A50E1002BC53A /* CorePagesView.m */; };
 		DBF344EF1C2A50E1002BC53A /* CorePagesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF344E71C2A50E1002BC53A /* CorePagesView.xib */; };
 		DBF344F01C2A50E1002BC53A /* CorePagesViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF344E91C2A50E1002BC53A /* CorePagesViewConfig.m */; };
+		DBF344F51C2A7E13002BC53A /* NetworkTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF344F41C2A7E13002BC53A /* NetworkTestViewController.m */; };
+		DBF344FB1C2A7EA0002BC53A /* UIViewController+EmptyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF344F81C2A7EA0002BC53A /* UIViewController+EmptyTableView.m */; };
+		DBF344FC1C2A7EA0002BC53A /* UIViewController+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF344FA1C2A7EA0002BC53A /* UIViewController+MJRefresh.m */; };
 		EA13285674D45222FDDA3171 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 002156300EF63F28AAAB09CA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -271,10 +277,10 @@
 		DB37D5351C2944F100B81FFC /* HttpDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpDefine.h; sourceTree = "<group>"; };
 		DB3AACB01C27FF5F00378E8E /* AJDevFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AJDevFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3AACB41C27FF5F00378E8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DB3AACB61C27FF5F00378E8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		DB3AACB71C27FF5F00378E8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DB3AACB91C27FF5F00378E8E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		DB3AACBA1C27FF5F00378E8E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DB3AACB61C27FF5F00378E8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AJDevFramework/AppDelegate.h; sourceTree = "<group>"; };
+		DB3AACB71C27FF5F00378E8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ../AJDevFramework/AppDelegate.m; sourceTree = "<group>"; };
+		DB3AACB91C27FF5F00378E8E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../AJDevFramework/ViewController.h; sourceTree = "<group>"; };
+		DB3AACBA1C27FF5F00378E8E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../AJDevFramework/ViewController.m; sourceTree = "<group>"; };
 		DB3AACBD1C27FF5F00378E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB3AACBF1C27FF5F00378E8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB3AACC21C27FF5F00378E8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -287,6 +293,12 @@
 		DB3AACDA1C27FF5F00378E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB3AACE71C2801E800378E8E /* NSTimer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Block.h"; sourceTree = "<group>"; };
 		DB3AACE81C2801E800378E8E /* NSTimer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Block.m"; sourceTree = "<group>"; };
+		DB4430FE1C2A8B71009FCA8E /* RequestSearchTel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestSearchTel.h; sourceTree = "<group>"; };
+		DB4430FF1C2A8B71009FCA8E /* RequestSearchTel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestSearchTel.m; sourceTree = "<group>"; };
+		DB4431001C2A8B71009FCA8E /* ResponseSearchTel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseSearchTel.h; sourceTree = "<group>"; };
+		DB4431011C2A8B71009FCA8E /* ResponseSearchTel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseSearchTel.m; sourceTree = "<group>"; };
+		DB4431021C2A8B71009FCA8E /* TelInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelInfo.h; sourceTree = "<group>"; };
+		DB4431031C2A8B71009FCA8E /* TelInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelInfo.m; sourceTree = "<group>"; };
 		DBF344DD1C2A50E1002BC53A /* CAAnimation+PagesViewBarShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+PagesViewBarShake.h"; sourceTree = "<group>"; };
 		DBF344DE1C2A50E1002BC53A /* CAAnimation+PagesViewBarShake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+PagesViewBarShake.m"; sourceTree = "<group>"; };
 		DBF344DF1C2A50E1002BC53A /* CorePageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePageModel.h; sourceTree = "<group>"; };
@@ -300,6 +312,12 @@
 		DBF344E71C2A50E1002BC53A /* CorePagesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CorePagesView.xib; sourceTree = "<group>"; };
 		DBF344E81C2A50E1002BC53A /* CorePagesViewConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePagesViewConfig.h; sourceTree = "<group>"; };
 		DBF344E91C2A50E1002BC53A /* CorePagesViewConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePagesViewConfig.m; sourceTree = "<group>"; };
+		DBF344F31C2A7E13002BC53A /* NetworkTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTestViewController.h; sourceTree = "<group>"; };
+		DBF344F41C2A7E13002BC53A /* NetworkTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTestViewController.m; sourceTree = "<group>"; };
+		DBF344F71C2A7EA0002BC53A /* UIViewController+EmptyTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+EmptyTableView.h"; sourceTree = "<group>"; };
+		DBF344F81C2A7EA0002BC53A /* UIViewController+EmptyTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+EmptyTableView.m"; sourceTree = "<group>"; };
+		DBF344F91C2A7EA0002BC53A /* UIViewController+MJRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MJRefresh.h"; sourceTree = "<group>"; };
+		DBF344FA1C2A7EA0002BC53A /* UIViewController+MJRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MJRefresh.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -443,6 +461,7 @@
 		DB37D4431C29245E00B81FFC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DBF344F61C2A7E83002BC53A /* Category */,
 				DB37D4B31C29340400B81FFC /* Base */,
 			);
 			path = Controller;
@@ -677,11 +696,6 @@
 				DB37D43E1C2923C600B81FFC /* View */,
 				DB37D43D1C2923B900B81FFC /* Library */,
 				DB3AACE61C2801DC00378E8E /* Category */,
-				DB3AACB61C27FF5F00378E8E /* AppDelegate.h */,
-				DB3AACB71C27FF5F00378E8E /* AppDelegate.m */,
-				DB3AACB91C27FF5F00378E8E /* ViewController.h */,
-				DB3AACBA1C27FF5F00378E8E /* ViewController.m */,
-				DB3AACBC1C27FF5F00378E8E /* Main.storyboard */,
 				DB3AACBF1C27FF5F00378E8E /* Assets.xcassets */,
 				DB3AACC11C27FF5F00378E8E /* LaunchScreen.storyboard */,
 				DB3AACC41C27FF5F00378E8E /* Info.plist */,
@@ -764,8 +778,40 @@
 		DBF344F11C2A75AE002BC53A /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				DB3AACB61C27FF5F00378E8E /* AppDelegate.h */,
+				DB3AACB71C27FF5F00378E8E /* AppDelegate.m */,
+				DB3AACB91C27FF5F00378E8E /* ViewController.h */,
+				DB3AACBA1C27FF5F00378E8E /* ViewController.m */,
+				DB3AACBC1C27FF5F00378E8E /* Main.storyboard */,
+				DBF344F21C2A7D9B002BC53A /* Network */,
 			);
 			path = Example;
+			sourceTree = "<group>";
+		};
+		DBF344F21C2A7D9B002BC53A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DB4430FE1C2A8B71009FCA8E /* RequestSearchTel.h */,
+				DB4430FF1C2A8B71009FCA8E /* RequestSearchTel.m */,
+				DB4431001C2A8B71009FCA8E /* ResponseSearchTel.h */,
+				DB4431011C2A8B71009FCA8E /* ResponseSearchTel.m */,
+				DB4431021C2A8B71009FCA8E /* TelInfo.h */,
+				DB4431031C2A8B71009FCA8E /* TelInfo.m */,
+				DBF344F31C2A7E13002BC53A /* NetworkTestViewController.h */,
+				DBF344F41C2A7E13002BC53A /* NetworkTestViewController.m */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DBF344F61C2A7E83002BC53A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DBF344F71C2A7EA0002BC53A /* UIViewController+EmptyTableView.h */,
+				DBF344F81C2A7EA0002BC53A /* UIViewController+EmptyTableView.m */,
+				DBF344F91C2A7EA0002BC53A /* UIViewController+MJRefresh.h */,
+				DBF344FA1C2A7EA0002BC53A /* UIViewController+MJRefresh.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		E6A563829A226B765DC76C62 /* Frameworks */ = {
@@ -1009,6 +1055,7 @@
 				DB37D4941C2932E500B81FFC /* BaseTextField.m in Sources */,
 				DB37D5101C29357D00B81FFC /* YTKRequest.m in Sources */,
 				DB3AACB81C27FF5F00378E8E /* AppDelegate.m in Sources */,
+				DBF344F51C2A7E13002BC53A /* NetworkTestViewController.m in Sources */,
 				DB37D4BF1C29345A00B81FFC /* BaseWebViewController.m in Sources */,
 				DB37D4801C292A9600B81FFC /* EXTSelectorChecking.m in Sources */,
 				DB37D4701C292A3B00B81FFC /* NSArray+ ZXPUnicode.m in Sources */,
@@ -1019,6 +1066,7 @@
 				DB37D5311C293F5800B81FFC /* ToolUtils.m in Sources */,
 				DB37D4B11C2933F100B81FFC /* NJKWebViewProgress.m in Sources */,
 				DB37D4631C29291700B81FFC /* NSMutableAttributedString+Extend.m in Sources */,
+				DB4431051C2A8B71009FCA8E /* ResponseSearchTel.m in Sources */,
 				DB37D4871C292AEA00B81FFC /* TestMyNetWork.m in Sources */,
 				DB37D4721C292A3B00B81FFC /* NSObject+ZXPUnicode.m in Sources */,
 				DB37D52A1C293EC100B81FFC /* RequestBeanBase.m in Sources */,
@@ -1029,10 +1077,13 @@
 				DB37D5091C29357D00B81FFC /* YTKBatchRequest.m in Sources */,
 				DB37D4831C292A9600B81FFC /* RegexUtil.m in Sources */,
 				DB37D4681C2929BE00B81FFC /* UIImage+ImageCompress.m in Sources */,
+				DBF344FB1C2A7EA0002BC53A /* UIViewController+EmptyTableView.m in Sources */,
+				DB4431041C2A8B71009FCA8E /* RequestSearchTel.m in Sources */,
 				DB37D4ED1C2934D000B81FFC /* AJTextView.m in Sources */,
 				DB37D49A1C29336600B81FFC /* AJPickerButton.m in Sources */,
 				DB37D5131C293C4300B81FFC /* BaseNavigationController.m in Sources */,
 				DB37D4651C29291700B81FFC /* UIImage+Blur.m in Sources */,
+				DB4431061C2A8B71009FCA8E /* TelInfo.m in Sources */,
 				DB37D50E1C29357D00B81FFC /* YTKNetworkConfig.m in Sources */,
 				DB37D44C1C2924BD00B81FFC /* AJToast.m in Sources */,
 				DB37D4841C292A9600B81FFC /* SecondCountDownTool.m in Sources */,
@@ -1045,6 +1096,7 @@
 				DBF344EC1C2A50E1002BC53A /* CorePagesBarBtn.m in Sources */,
 				DB37D4541C29259800B81FFC /* AJPopupView.m in Sources */,
 				DB3AACB51C27FF5F00378E8E /* main.m in Sources */,
+				DBF344FC1C2A7EA0002BC53A /* UIViewController+MJRefresh.m in Sources */,
 				DB37D50A1C29357D00B81FFC /* YTKBatchRequestAgent.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1087,6 +1139,7 @@
 				DB3AACBD1C27FF5F00378E8E /* Base */,
 			);
 			name = Main.storyboard;
+			path = ../AJDevFramework;
 			sourceTree = "<group>";
 		};
 		DB3AACC11C27FF5F00378E8E /* LaunchScreen.storyboard */ = {

@@ -10,20 +10,28 @@
 
 @implementation RequestBeanBase
 
+#warning !!!!!
+#warning 以下的配置为临时配置，具体配置根据项目不同
+#warning !!!!!
+
 /// 每个请求Bean继承必须实现该方法
 - (NSString *)requestUrl
 {
-    return nil;
+    return @"";
 }
 
-- (YTKRequestMethod)requestMethod
-{
+- (YTKRequestMethod)requestMethod {
     return YTKRequestMethodGet;
 }
 
 - (YTKRequestSerializerType)requestSerializerType
 {
     return YTKRequestSerializerTypeJSON;
+}
+
+- (NSDictionary *)requestHeaderFieldValueDictionary
+{
+    return @{@"apikey": @"61979cba44a3b9abb16c5127574dd2e5"};
 }
 
 @end
