@@ -36,3 +36,9 @@ AOP处理库: MOAspects                                        -> 2.1.0
 系统图片选择库: MLSelectPhoto                               -> 1.2.1
 
 上拉下拉刷新库: MJRefresh                                   -> 3.0.7
+
+新版本初始化处理库:  MTMigration                       -> 0.0.5
+
+非关系型数据库:  Realm                             ->  0.97.0
+
+具有正则匹配的UITextField:  TSValidatedTextField  ->1.0.0

@@ -94,6 +94,13 @@
 		DB3AACCE1C27FF5F00378E8E /* AJDevFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3AACCD1C27FF5F00378E8E /* AJDevFrameworkTests.m */; };
 		DB3AACD91C27FF5F00378E8E /* AJDevFrameworkUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3AACD81C27FF5F00378E8E /* AJDevFrameworkUITests.m */; };
 		DB3AACE91C2801E800378E8E /* NSTimer+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = DB3AACE81C2801E800378E8E /* NSTimer+Block.m */; };
+		DBF344EA1C2A50E1002BC53A /* CAAnimation+PagesViewBarShake.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF344DE1C2A50E1002BC53A /* CAAnimation+PagesViewBarShake.m */; };
+		DBF344EB1C2A50E1002BC53A /* CorePageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF344E01C2A50E1002BC53A /* CorePageModel.m */; };
+		DBF344EC1C2A50E1002BC53A /* CorePagesBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF344E21C2A50E1002BC53A /* CorePagesBarBtn.m */; };
+		DBF344ED1C2A50E1002BC53A /* CorePagesBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF344E41C2A50E1002BC53A /* CorePagesBarView.m */; };
+		DBF344EE1C2A50E1002BC53A /* CorePagesView.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF344E61C2A50E1002BC53A /* CorePagesView.m */; };
+		DBF344EF1C2A50E1002BC53A /* CorePagesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF344E71C2A50E1002BC53A /* CorePagesView.xib */; };
+		DBF344F01C2A50E1002BC53A /* CorePagesViewConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = DBF344E91C2A50E1002BC53A /* CorePagesViewConfig.m */; };
 		EA13285674D45222FDDA3171 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 002156300EF63F28AAAB09CA /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -280,6 +287,19 @@
 		DB3AACDA1C27FF5F00378E8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB3AACE71C2801E800378E8E /* NSTimer+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Block.h"; sourceTree = "<group>"; };
 		DB3AACE81C2801E800378E8E /* NSTimer+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Block.m"; sourceTree = "<group>"; };
+		DBF344DD1C2A50E1002BC53A /* CAAnimation+PagesViewBarShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CAAnimation+PagesViewBarShake.h"; sourceTree = "<group>"; };
+		DBF344DE1C2A50E1002BC53A /* CAAnimation+PagesViewBarShake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CAAnimation+PagesViewBarShake.m"; sourceTree = "<group>"; };
+		DBF344DF1C2A50E1002BC53A /* CorePageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePageModel.h; sourceTree = "<group>"; };
+		DBF344E01C2A50E1002BC53A /* CorePageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePageModel.m; sourceTree = "<group>"; };
+		DBF344E11C2A50E1002BC53A /* CorePagesBarBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePagesBarBtn.h; sourceTree = "<group>"; };
+		DBF344E21C2A50E1002BC53A /* CorePagesBarBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePagesBarBtn.m; sourceTree = "<group>"; };
+		DBF344E31C2A50E1002BC53A /* CorePagesBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePagesBarView.h; sourceTree = "<group>"; };
+		DBF344E41C2A50E1002BC53A /* CorePagesBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePagesBarView.m; sourceTree = "<group>"; };
+		DBF344E51C2A50E1002BC53A /* CorePagesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePagesView.h; sourceTree = "<group>"; };
+		DBF344E61C2A50E1002BC53A /* CorePagesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePagesView.m; sourceTree = "<group>"; };
+		DBF344E71C2A50E1002BC53A /* CorePagesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CorePagesView.xib; sourceTree = "<group>"; };
+		DBF344E81C2A50E1002BC53A /* CorePagesViewConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CorePagesViewConfig.h; sourceTree = "<group>"; };
+		DBF344E91C2A50E1002BC53A /* CorePagesViewConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CorePagesViewConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +341,7 @@
 		DB37D43D1C2923B900B81FFC /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				DBF344DC1C2A50E1002BC53A /* CorePageView */,
 				DB37D4AC1C2933F100B81FFC /* NJKWebViewProgress */,
 				DB37D48E1C2932B300B81FFC /* WTReTextField */,
 				DB37D4691C292A3B00B81FFC /* ZXPUnicode */,
@@ -719,6 +740,26 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		DBF344DC1C2A50E1002BC53A /* CorePageView */ = {
+			isa = PBXGroup;
+			children = (
+				DBF344DD1C2A50E1002BC53A /* CAAnimation+PagesViewBarShake.h */,
+				DBF344DE1C2A50E1002BC53A /* CAAnimation+PagesViewBarShake.m */,
+				DBF344DF1C2A50E1002BC53A /* CorePageModel.h */,
+				DBF344E01C2A50E1002BC53A /* CorePageModel.m */,
+				DBF344E11C2A50E1002BC53A /* CorePagesBarBtn.h */,
+				DBF344E21C2A50E1002BC53A /* CorePagesBarBtn.m */,
+				DBF344E31C2A50E1002BC53A /* CorePagesBarView.h */,
+				DBF344E41C2A50E1002BC53A /* CorePagesBarView.m */,
+				DBF344E51C2A50E1002BC53A /* CorePagesView.h */,
+				DBF344E61C2A50E1002BC53A /* CorePagesView.m */,
+				DBF344E71C2A50E1002BC53A /* CorePagesView.xib */,
+				DBF344E81C2A50E1002BC53A /* CorePagesViewConfig.h */,
+				DBF344E91C2A50E1002BC53A /* CorePagesViewConfig.m */,
+			);
+			path = CorePageView;
+			sourceTree = "<group>";
+		};
 		E6A563829A226B765DC76C62 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -848,6 +889,7 @@
 				DB3AACBE1C27FF5F00378E8E /* Main.storyboard in Resources */,
 				DB37D4E31C2934BE00B81FFC /* ic_down_arrow@2x.png in Resources */,
 				DB37D4F41C29350A00B81FFC /* Banner.xib in Resources */,
+				DBF344EF1C2A50E1002BC53A /* CorePagesView.xib in Resources */,
 				DB37D4E71C2934BE00B81FFC /* ic_menu_item@3x.png in Resources */,
 				DB37D4D21C2934A400B81FFC /* ic_check_1@3x.png in Resources */,
 				DB37D4E61C2934BE00B81FFC /* ic_menu_item@2x.png in Resources */,
@@ -926,13 +968,16 @@
 			files = (
 				DB37D50C1C29357D00B81FFC /* YTKChainRequestAgent.m in Sources */,
 				DB37D4B91C29342900B81FFC /* SingleSelectionButton.m in Sources */,
+				DBF344F01C2A50E1002BC53A /* CorePagesViewConfig.m in Sources */,
 				DB37D47F1C292A9600B81FFC /* EXTScope.m in Sources */,
 				DB3AACBB1C27FF5F00378E8E /* ViewController.m in Sources */,
 				DB37D50F1C29357D00B81FFC /* YTKNetworkPrivate.m in Sources */,
+				DBF344EB1C2A50E1002BC53A /* CorePageModel.m in Sources */,
 				DB37D5191C293CB200B81FFC /* BaseViewController.m in Sources */,
 				DB37D52B1C293EC100B81FFC /* ResponseBeanBase.m in Sources */,
 				DB37D44D1C2924BD00B81FFC /* AJToastViewController.m in Sources */,
 				DB37D51F1C293D6200B81FFC /* ObjectBeanBase.m in Sources */,
+				DBF344ED1C2A50E1002BC53A /* CorePagesBarView.m in Sources */,
 				DB37D4AB1C2933DC00B81FFC /* JWBarButtonItem.m in Sources */,
 				DB37D4BC1C29344300B81FFC /* UICountingLabel.m in Sources */,
 				DB37D4A21C2933AE00B81FFC /* CircleView.m in Sources */,
@@ -947,6 +992,7 @@
 				DB37D48C1C29309600B81FFC /* Reachability.m in Sources */,
 				DB37D4A81C2933CA00B81FFC /* FuncButton.m in Sources */,
 				DB37D5221C293E5C00B81FFC /* GlobalInstance.m in Sources */,
+				DBF344EE1C2A50E1002BC53A /* CorePagesView.m in Sources */,
 				DB37D4711C292A3B00B81FFC /* NSDictionary+ZXPUnicode.m in Sources */,
 				DB37D4DF1C2934BE00B81FFC /* AJDropDownMenu.m in Sources */,
 				DB37D5341C293FDE00B81FFC /* NSDateFormatter+Category.m in Sources */,
@@ -970,6 +1016,7 @@
 				DB37D52A1C293EC100B81FFC /* RequestBeanBase.m in Sources */,
 				DB37D4B61C29341800B81FFC /* RoundCornerButton.m in Sources */,
 				DB37D5161C293C6F00B81FFC /* UIViewController+BackButtonHandler.m in Sources */,
+				DBF344EA1C2A50E1002BC53A /* CAAnimation+PagesViewBarShake.m in Sources */,
 				DB37D4E01C2934BE00B81FFC /* DropDownMenuCell.m in Sources */,
 				DB37D5091C29357D00B81FFC /* YTKBatchRequest.m in Sources */,
 				DB37D4831C292A9600B81FFC /* RegexUtil.m in Sources */,
@@ -987,6 +1034,7 @@
 				DB37D52E1C293ED000B81FFC /* UserBean.m in Sources */,
 				DB37D5251C293E6400B81FFC /* MJExtensionConfig.m in Sources */,
 				DB37D4EE1C2934D000B81FFC /* AJTextViewEextend.m in Sources */,
+				DBF344EC1C2A50E1002BC53A /* CorePagesBarBtn.m in Sources */,
 				DB37D4541C29259800B81FFC /* AJPopupView.m in Sources */,
 				DB3AACB51C27FF5F00378E8E /* main.m in Sources */,
 				DB37D50A1C29357D00B81FFC /* YTKBatchRequestAgent.m in Sources */,

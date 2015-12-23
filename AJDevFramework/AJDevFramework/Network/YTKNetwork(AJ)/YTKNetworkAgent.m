@@ -245,26 +245,19 @@
             [request toggleAccessoriesWillStopCallBack];
             [request requestCompleteFilter];
             
-            // 回调处理, 如果状态码成功才回调，否则当错误处理
-            ResponseBeanBase *baseResponse = request.responseBean;
-            if (baseResponse.code == SUCCESS_CODE) {
-                
-                if (request.delegate != nil) {
-                    [request.delegate requestFinished:request];
-                }
-                if (request.successCompletionBlock) {
-                    request.successCompletionBlock(request);
-                }
-                
-                // 额外成功处理逻辑
-                [self handleRequestSuccess:request];
-                
-            }else{
-                //  额外失败处理逻辑
-                [self handleRequestFailure:request];
+            // 结果回调
+            if (request.delegate != nil) {
+                [request.delegate requestFinished:request];
+            }
+            if (request.successCompletionBlock) {
+                request.successCompletionBlock(request);
             }
             
+            
             [request toggleAccessoriesDidStopCallBack];
+            
+            // 额外成功处理逻辑
+            [self handleRequestSuccess:request];
             
         } else {
 
