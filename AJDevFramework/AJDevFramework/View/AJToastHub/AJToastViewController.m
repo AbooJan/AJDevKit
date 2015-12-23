@@ -310,92 +310,52 @@ static const CGFloat DEFAULT_ALPHA  = 0.7;
     // 调整菊花中点
     [self refreshHubView];
     
-    // 目标中点Y坐标
-    CGFloat targetY = kScreenHeight / 2.0;
-    
-    // 初始化弹窗中点
-    self.hubContainView.center = CGPointMake(kScreenWidth / 2.0, targetY);
-    self.hubContainView.alpha = 0.8;
-    
-    finished();
-    
     // --- 动画 ---
-    //    POPSpringAnimation *scaleAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
-    //    scaleAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(1.2, 1.2)];
-    //    scaleAnimation.springSpeed = 18.0;
-    //    scaleAnimation.springBounciness = 12.0;
-    //    scaleAnimation.removedOnCompletion = YES;
     
+    self.hubContainView.center = CGPointMake(kScreenWidth / 2.0, kScreenHeight / 2.0);
     
-    //    POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
-    //    positionAnimation.toValue = @(targetY);
-    //    positionAnimation.springBounciness = 10;
-    //    positionAnimation.springSpeed = 18;
-    //
-    //    POPBasicAnimation *opacityAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerOpacity];
-    //    opacityAnimation.toValue = @(0.9);
-    //    opacityAnimation.duration = 0.5;
+    POPSpringAnimation *alphaAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerOpacity];
+    alphaAnimation.fromValue = @(0.0);
+    alphaAnimation.toValue = @(0.8);
+    alphaAnimation.springSpeed = 18.f;
     
-    //    [self.hubContainView.layer pop_addAnimation:positionAnimation forKey:@"positionAnimation3"];
-    //    [self.hubContainView.layer pop_addAnimation:opacityAnimation forKey:@"opacityAnimation3"];
-    //    [self.hubContainView.layer pop_addAnimation:scaleAnimation forKey:@"scaleAnimation"];
-    //
-    //    [scaleAnimation setCompletionBlock:^(POPAnimation *animation, BOOL isFinish) {
-    //        finished();
-    //    }];
+    POPSpringAnimation *scaleAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerSize];
+    scaleAnimation.springBounciness = 12;
+    scaleAnimation.springSpeed = 18.f;
+    scaleAnimation.fromValue = [NSValue valueWithCGSize:CGSizeMake(0.1, 0.1)];
+    scaleAnimation.toValue = [NSValue valueWithCGSize:self.hubContainView.layer.bounds.size];
+    
+    [self.hubContainView.layer pop_addAnimation:alphaAnimation forKey:@"hubAlpha2"];
+    [self.hubContainView.layer pop_addAnimation:scaleAnimation forKey:@"hubScale2"];
+    
+    [scaleAnimation setCompletionBlock:^(POPAnimation *animation, BOOL isFinish) {
+        finished();
+    }];
 }
 
 - (void)dismissHub:(void (^)())finished
 {
-    @weakify(self);
-    [UIView animateWithDuration:0.5 animations:^{
-        
-        @strongify(self);
-        
-        self.hubContainView.alpha = 0.0;
-        
-    } completion:^(BOOL finish) {
-        @strongify(self);
-        
-        [self.hubContainView removeFromSuperview];
-        finished();
-    }];
+    POPSpringAnimation *alphaAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerOpacity];
+    alphaAnimation.fromValue = @(0.8);
+    alphaAnimation.toValue = @(0.0);
+    alphaAnimation.springSpeed = 18.f;
     
+    POPSpringAnimation *scaleAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerSize];
+    scaleAnimation.springBounciness = 1;
+    scaleAnimation.springSpeed = 18.f;
+    scaleAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(0.1, 0.1)];
     
-    //    [self.hubContainView removeFromSuperview];
-    //
-    //    finished();
-    
-    // ----- 动画部分 -----
-    
-    // 设置消失时的Y坐标
-    //    CGFloat animationPositionY = kScreenHeight / 2.0 + 32.0;
-    
-    //    POPSpringAnimation *scaleAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
-    //    scaleAnimation.toValue = [NSValue valueWithCGPoint:CGPointMake(1.0, 1.0)];
-    //    scaleAnimation.springSpeed = 18.0;
-    //    scaleAnimation.springBounciness = 12.0;
-    
-    //    POPBasicAnimation *opacityAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerOpacity];
-    //    opacityAnimation.toValue = @(0.5);
-    //    opacityAnimation.duration = 1.0;
-    
-    //    POPBasicAnimation *offscreenAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerPositionY];
-    //    offscreenAnimation.toValue = @(animationPositionY);
-    //    offscreenAnimation.duration = 1.0;
-    
-    //    [self.hubContainView.layer pop_addAnimation:offscreenAnimation forKey:@"offscreenAnimation4"];
-    //    [self.hubContainView.layer pop_addAnimation:opacityAnimation forKey:@"opacityAnimation4"];
-    //    [self.hubContainView.layer pop_addAnimation:scaleAnimation forKey:@"scaleAnimation1"];
+    [self.hubContainView.layer pop_addAnimation:alphaAnimation forKey:@"hubAlpha1"];
+    [self.hubContainView.layer pop_addAnimation:scaleAnimation forKey:@"hubScale1"];
     
     // 完成回调
-    //    __weak __typeof(&*self) weakSelf = self;
-    //    [scaleAnimation setCompletionBlock:^(POPAnimation *animation, BOOL finish) {
-    //        
-    //        [weakSelf.hubContainView removeFromSuperview];
-    //        
-    //        finished();
-    //    }];
+    __weak __typeof(&*self) weakSelf = self;
+    [scaleAnimation setCompletionBlock:^(POPAnimation *animation, BOOL finish) {
+        
+        [weakSelf.hubContainView removeFromSuperview];
+        
+        finished();
+    }];
 }
 
 @end
