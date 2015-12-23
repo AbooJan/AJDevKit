@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  AJDevFramework
+//
+//  Created by 钟宝健 on 15/12/22.
+//  Copyright © 2015年 钟宝健. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Common.h"
+#import <Foundation/Foundation.h>
+#import "UIView+Extend.h"
+#import "AJToast.h"
+#import "AJHub.h"
+#import "GlobalInstance.h"
+#import "ToolUtils.h"
+#import "MJExtension.h"
+#import "HttpDefine.h"
+
+#endif /* PrefixHeader_pch */

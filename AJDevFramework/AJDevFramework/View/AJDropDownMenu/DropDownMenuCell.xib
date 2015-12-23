@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="40" id="r2l-NJ-2wv" customClass="DropDownMenuCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r2l-NJ-2wv" id="HBm-xr-q6D">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_menu_item.png" translatesAutoresizingMaskIntoConstraints="NO" id="iHQ-1j-M8R">
+                        <rect key="frame" x="8" y="11" width="18" height="22"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="DwY-pM-CdZ"/>
+                            <constraint firstAttribute="width" constant="18" id="SPP-QX-LPi"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdS-zN-ETD">
+                        <rect key="frame" x="34" y="8" width="278" height="27"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.18823529779911041" green="0.18823529779911041" blue="0.18823529779911041" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="qdS-zN-ETD" secondAttribute="trailing" constant="8" id="3rS-4e-yYJ"/>
+                    <constraint firstAttribute="bottom" secondItem="qdS-zN-ETD" secondAttribute="bottom" constant="8" id="7in-zv-KEi"/>
+                    <constraint firstItem="iHQ-1j-M8R" firstAttribute="leading" secondItem="HBm-xr-q6D" secondAttribute="leading" constant="8" id="GVy-4y-Vb4"/>
+                    <constraint firstItem="qdS-zN-ETD" firstAttribute="leading" secondItem="iHQ-1j-M8R" secondAttribute="trailing" constant="8" id="fkM-j8-YMQ"/>
+                    <constraint firstItem="iHQ-1j-M8R" firstAttribute="centerY" secondItem="HBm-xr-q6D" secondAttribute="centerY" id="ma2-Ac-hTt"/>
+                    <constraint firstItem="qdS-zN-ETD" firstAttribute="top" secondItem="HBm-xr-q6D" secondAttribute="top" constant="8" id="tVc-16-M62"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="iconImageView" destination="iHQ-1j-M8R" id="Z3B-7L-ig6"/>
+                <outlet property="itemNameLabel" destination="qdS-zN-ETD" id="r0u-fh-wSW"/>
+            </connections>
+            <point key="canvasLocation" x="392" y="255"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_menu_item.png" width="18" height="22"/>
+    </resources>
+</document>
