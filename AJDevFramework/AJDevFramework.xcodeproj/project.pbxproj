@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB1049191C2BE687003FB479 /* QueryDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1049181C2BE687003FB479 /* QueryDataViewController.m */; };
+		DB10491C1C2BE728003FB479 /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10491B1C2BE728003FB479 /* UpdateViewController.m */; };
+		DB10491F1C2C07AC003FB479 /* AJSortFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10491E1C2C07AC003FB479 /* AJSortFilter.m */; };
+		DB19CC821C2B94EB0088A0EA /* DatabaseTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB19CC811C2B94EB0088A0EA /* DatabaseTestViewController.m */; };
+		DB19CC8A1C2B9A160088A0EA /* AJDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB19CC891C2B9A160088A0EA /* AJDBManager.m */; };
+		DB19CC8D1C2B9B020088A0EA /* AJDBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DB19CC8C1C2B9B020088A0EA /* AJDBObject.m */; };
+		DB19CC901C2B9FFC0088A0EA /* AJDBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = DB19CC8F1C2B9FFC0088A0EA /* AJDBArray.m */; };
+		DB19CC931C2BCCA40088A0EA /* StudentBean.m in Sources */ = {isa = PBXBuildFile; fileRef = DB19CC921C2BCCA40088A0EA /* StudentBean.m */; };
 		DB37D43C1C29233B00B81FFC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB37D43B1C29233B00B81FFC /* libc++.tbd */; };
 		DB37D44B1C2924BD00B81FFC /* AJHub.m in Sources */ = {isa = PBXBuildFile; fileRef = DB37D4461C2924BD00B81FFC /* AJHub.m */; };
 		DB37D44C1C2924BD00B81FFC /* AJToast.m in Sources */ = {isa = PBXBuildFile; fileRef = DB37D4481C2924BD00B81FFC /* AJToast.m */; };
@@ -131,6 +139,22 @@
 		002156300EF63F28AAAB09CA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B1A644710FC572909794E9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CE9539B5A3ADB1FE4519EDA3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DB1049171C2BE687003FB479 /* QueryDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryDataViewController.h; sourceTree = "<group>"; };
+		DB1049181C2BE687003FB479 /* QueryDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryDataViewController.m; sourceTree = "<group>"; };
+		DB10491A1C2BE728003FB479 /* UpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateViewController.h; sourceTree = "<group>"; };
+		DB10491B1C2BE728003FB479 /* UpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateViewController.m; sourceTree = "<group>"; };
+		DB10491D1C2C07AC003FB479 /* AJSortFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJSortFilter.h; sourceTree = "<group>"; };
+		DB10491E1C2C07AC003FB479 /* AJSortFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJSortFilter.m; sourceTree = "<group>"; };
+		DB19CC801C2B94EB0088A0EA /* DatabaseTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseTestViewController.h; sourceTree = "<group>"; };
+		DB19CC811C2B94EB0088A0EA /* DatabaseTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseTestViewController.m; sourceTree = "<group>"; };
+		DB19CC881C2B9A160088A0EA /* AJDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJDBManager.h; sourceTree = "<group>"; };
+		DB19CC891C2B9A160088A0EA /* AJDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJDBManager.m; sourceTree = "<group>"; };
+		DB19CC8B1C2B9B020088A0EA /* AJDBObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJDBObject.h; sourceTree = "<group>"; };
+		DB19CC8C1C2B9B020088A0EA /* AJDBObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJDBObject.m; sourceTree = "<group>"; };
+		DB19CC8E1C2B9FFC0088A0EA /* AJDBArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJDBArray.h; sourceTree = "<group>"; };
+		DB19CC8F1C2B9FFC0088A0EA /* AJDBArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJDBArray.m; sourceTree = "<group>"; };
+		DB19CC911C2BCCA40088A0EA /* StudentBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentBean.h; sourceTree = "<group>"; };
+		DB19CC921C2BCCA40088A0EA /* StudentBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentBean.m; sourceTree = "<group>"; };
 		DB37D43B1C29233B00B81FFC /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		DB37D4451C2924BD00B81FFC /* AJHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJHub.h; sourceTree = "<group>"; };
 		DB37D4461C2924BD00B81FFC /* AJHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJHub.m; sourceTree = "<group>"; };
@@ -354,6 +378,21 @@
 				13B1A644710FC572909794E9 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		DB19CC871C2B99DC0088A0EA /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				DB19CC881C2B9A160088A0EA /* AJDBManager.h */,
+				DB19CC891C2B9A160088A0EA /* AJDBManager.m */,
+				DB19CC8B1C2B9B020088A0EA /* AJDBObject.h */,
+				DB19CC8C1C2B9B020088A0EA /* AJDBObject.m */,
+				DB19CC8E1C2B9FFC0088A0EA /* AJDBArray.h */,
+				DB19CC8F1C2B9FFC0088A0EA /* AJDBArray.m */,
+				DB10491D1C2C07AC003FB479 /* AJSortFilter.h */,
+				DB10491E1C2C07AC003FB479 /* AJSortFilter.m */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		DB37D43D1C2923B900B81FFC /* Library */ = {
@@ -691,6 +730,7 @@
 				DB37D4431C29245E00B81FFC /* Controller */,
 				DB37D4421C29244C00B81FFC /* Model */,
 				DB37D4411C29243E00B81FFC /* Network */,
+				DB19CC871C2B99DC0088A0EA /* Database */,
 				DB37D4401C29241C00B81FFC /* Tools */,
 				DB37D43F1C29240C00B81FFC /* Resource */,
 				DB37D43E1C2923C600B81FFC /* View */,
@@ -758,6 +798,14 @@
 		DB4431071C2AA127009FCA8E /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				DB19CC801C2B94EB0088A0EA /* DatabaseTestViewController.h */,
+				DB19CC811C2B94EB0088A0EA /* DatabaseTestViewController.m */,
+				DB19CC911C2BCCA40088A0EA /* StudentBean.h */,
+				DB19CC921C2BCCA40088A0EA /* StudentBean.m */,
+				DB1049171C2BE687003FB479 /* QueryDataViewController.h */,
+				DB1049181C2BE687003FB479 /* QueryDataViewController.m */,
+				DB10491A1C2BE728003FB479 /* UpdateViewController.h */,
+				DB10491B1C2BE728003FB479 /* UpdateViewController.m */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -1046,6 +1094,8 @@
 				DB37D5081C29357D00B81FFC /* YTKBaseRequest.m in Sources */,
 				DB37D44B1C2924BD00B81FFC /* AJHub.m in Sources */,
 				DB37D4A51C2933B700B81FFC /* JW_UILabel.m in Sources */,
+				DB19CC8A1C2B9A160088A0EA /* AJDBManager.m in Sources */,
+				DB1049191C2BE687003FB479 /* QueryDataViewController.m in Sources */,
 				DB37D50B1C29357D00B81FFC /* YTKChainRequest.m in Sources */,
 				DB37D4CC1C2934A400B81FFC /* AJCheckbox.m in Sources */,
 				DB37D4B21C2933F100B81FFC /* NJKWebViewProgressView.m in Sources */,
@@ -1063,14 +1113,17 @@
 				DB37D4941C2932E500B81FFC /* BaseTextField.m in Sources */,
 				DB37D5101C29357D00B81FFC /* YTKRequest.m in Sources */,
 				DB3AACB81C27FF5F00378E8E /* AppDelegate.m in Sources */,
+				DB19CC901C2B9FFC0088A0EA /* AJDBArray.m in Sources */,
 				DBF344F51C2A7E13002BC53A /* NetworkTestViewController.m in Sources */,
 				DB37D4BF1C29345A00B81FFC /* BaseWebViewController.m in Sources */,
 				DB37D4801C292A9600B81FFC /* EXTSelectorChecking.m in Sources */,
 				DB37D4701C292A3B00B81FFC /* NSArray+ ZXPUnicode.m in Sources */,
 				DB37D45B1C2928D500B81FFC /* NSString+Size.m in Sources */,
+				DB19CC821C2B94EB0088A0EA /* DatabaseTestViewController.m in Sources */,
 				DB37D50D1C29357D00B81FFC /* YTKNetworkAgent.m in Sources */,
 				DB37D4641C29291700B81FFC /* UIColor+CustomColors.m in Sources */,
 				DB3AACE91C2801E800378E8E /* NSTimer+Block.m in Sources */,
+				DB10491C1C2BE728003FB479 /* UpdateViewController.m in Sources */,
 				DB37D5311C293F5800B81FFC /* ToolUtils.m in Sources */,
 				DB37D4B11C2933F100B81FFC /* NJKWebViewProgress.m in Sources */,
 				DB37D4631C29291700B81FFC /* NSMutableAttributedString+Extend.m in Sources */,
@@ -1084,11 +1137,13 @@
 				DB37D4E01C2934BE00B81FFC /* DropDownMenuCell.m in Sources */,
 				DB37D5091C29357D00B81FFC /* YTKBatchRequest.m in Sources */,
 				DB37D4831C292A9600B81FFC /* RegexUtil.m in Sources */,
+				DB19CC8D1C2B9B020088A0EA /* AJDBObject.m in Sources */,
 				DB37D4681C2929BE00B81FFC /* UIImage+ImageCompress.m in Sources */,
 				DBF344FB1C2A7EA0002BC53A /* UIViewController+EmptyTableView.m in Sources */,
 				DB4431041C2A8B71009FCA8E /* RequestSearchTel.m in Sources */,
 				DB37D4ED1C2934D000B81FFC /* AJTextView.m in Sources */,
 				DB37D49A1C29336600B81FFC /* AJPickerButton.m in Sources */,
+				DB10491F1C2C07AC003FB479 /* AJSortFilter.m in Sources */,
 				DB37D5131C293C4300B81FFC /* BaseNavigationController.m in Sources */,
 				DB37D4651C29291700B81FFC /* UIImage+Blur.m in Sources */,
 				DB4431061C2A8B71009FCA8E /* TelInfo.m in Sources */,
@@ -1098,6 +1153,7 @@
 				DB37D45C1C2928D500B81FFC /* UIView+Extend.m in Sources */,
 				DB37D49F1C29337400B81FFC /* AJPickerTextField.m in Sources */,
 				DB37D4531C29259800B81FFC /* AJAlertView.m in Sources */,
+				DB19CC931C2BCCA40088A0EA /* StudentBean.m in Sources */,
 				DB37D52E1C293ED000B81FFC /* UserBean.m in Sources */,
 				DB37D5251C293E6400B81FFC /* MJExtensionConfig.m in Sources */,
 				DB37D4EE1C2934D000B81FFC /* AJTextViewEextend.m in Sources */,

@@ -277,6 +277,7 @@ return __singleton__; \
 
 #define STORYBOARD(NAME) [UIStoryboard storyboardWithName:(NAME) bundle:[NSBundle mainBundle]]
 #define UINIB(NAME)      [UINib nibWithNibName:(NAME) bundle:[NSBundle mainBundle]]
+#define MAIN_STORYBOARD  STORYBOARD(@"Main")
 
 #endif
 

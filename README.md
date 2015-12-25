@@ -64,6 +64,94 @@ AppStore评分封装库    		| iRate 		     | `1.11.4`
 ---
 
 
+#### 关于数据库
+
+* 所有需要写入数据库的类需要继承自：`AJDBObject` 。  并且必须要实现方法: `primaryKey`，用来定义主键。
+* 如果继承自 `AJDBObject` 的类里面包含了一个数组类型，定义的时候需要这样定义：
+
+ 	```
+  	@property AJDBArray<数组类名 *> *变量名;  
+  	```
+
+* 所有数据库事务操作通过 `AJDBManager` 类。接口有:
+
+```
+/**
+ *  写入一条数据
+ *
+ *  @param obj 目标数据
+ */
++ (void)writeObj:(AJDBObject *)obj;
+
+/**
+ *  批量写入
+ *
+ *  @param objs 数组
+ */
++ (void)writeObjArray:(NSArray<__kindof AJDBObject *> *)objs;
+
+/**
+ *  更新一条数据，更新数据必须在block中执行
+ *
+ *  @param updateBlock 在block中更新数据
+ */
++ (void)updateObj:(void (^)())updateBlock;
+
+/**
+ *  在数据库中删除目标数据
+ *
+ *  @param obj 目标数据
+ */
++ (void)deleteObj:(AJDBObject *)obj;
+
+/**
+ *  查询目标数据模型的所有存储数据
+ *
+ *  @param obj 需要查询的目标类
+ *
+ *  @return 数据库中存储的所有数据
+ */
++ (NSArray<AJDBObject *> *)queryAllObj:(AJDBObject *)obj;
+
+/**
+ *  根据断言条件查询目标数据
+ *
+ *  @param predicate 查询条件
+ *  @param obj       需要查询的对象
+ *
+ *  @return 查询结果
+ */
++ (NSArray<AJDBObject *> *)queryObjWithPredicate:(NSPredicate *)predicate targetObj:(AJDBObject *)obj;
+
+/**
+ *  根据断言条件查询数据，并进行排序
+ *
+ *  @param predicate  查询条件
+ *  @param obj        需要查询的对象
+ *  @param sortFilter 排序配置
+ *
+ *  @return 查询结果
+ */
++ (NSArray<AJDBObject *> *)queryObjWithPredicate:(NSPredicate *)predicate targetObj:(AJDBObject *)obj sortFilter:(AJSortFilter *)sortFilter;
+
+/**
+ *  根据主键查询目标数据
+ *
+ *  @param primaryKey 主键值
+ *  @param obj        需要查询的对象
+ *
+ *  @return 查询结果
+ */
++ (AJDBObject *)queryObjWithPrimaryKeyValue:(id)primaryKey targetObj:(AJDBObject *)obj;
+
+/**
+ *  清空数据库
+ */
++ (void)clear;
+```
+
+
+
 
 
 

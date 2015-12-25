@@ -15,7 +15,6 @@
 #define kDefaultAlertViewWidth  300.0
 #define kAlertContentFont       [UIFont systemFontOfSize:14]
 #define kDevideColor            [UIColor colorWithRed:220/255.0 green:220/255.0 blue:220/255.0 alpha:1];
-#define RGB(R,G,B)		[UIColor colorWithRed:R/255.0f green:G/255.0f blue:B/255.0f alpha:1.0f]
 
 static const CGFloat DEFAULT_TITLEVIEW_HEIGHT   = 35.0;
 static const CGFloat DEFAULT_CONTENTVIEW_HEIGHT = 60.0;

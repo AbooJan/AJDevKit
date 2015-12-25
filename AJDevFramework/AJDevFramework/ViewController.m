@@ -11,6 +11,7 @@
 #import "UIViewController+EmptyTableView.h"
 #import "UIViewController+MJRefresh.h"
 #import "JWBarButtonItem.h"
+#import "DatabaseTestViewController.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -36,7 +37,7 @@
 {
     [super initData];
     
-    self.selectionArray = @[@"网络请求示例"];
+    self.selectionArray = @[@"网络请求示例", @"数据库示例"];
     
     self.emptyArray = @[];
 }
@@ -89,6 +90,9 @@
     if (indexPath.row == 0) {
         NetworkTestViewController *networkTestVC = [STORYBOARD(@"Main") instantiateViewControllerWithIdentifier:@"NetworkTestViewController"];
         [self pushVC:networkTestVC];
+    }else if (indexPath.row == 1){
+        DatabaseTestViewController *databaseTestVC = [STORYBOARD(@"Main") instantiateViewControllerWithIdentifier:@"DatabaseTestViewController"];
+        [self pushVC:databaseTestVC];
     }
 }
 

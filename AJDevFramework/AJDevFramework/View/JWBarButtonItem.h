@@ -12,6 +12,8 @@
 
 /// 是否显示红点，默认不显示
 @property (nonatomic, assign) BOOL showBadge;
+/// 显示的颜色
+@property (nonatomic, strong) UIColor *showColor;
 
 
 /// 事件监听方法返回的参数类型为UIButton

@@ -20,5 +20,6 @@
 #import "HttpDefine.h"
 #import "metamacros.h"
 #import "EXTScope.h"
+#import "AJDBManager.h"
 
 #endif /* PrefixHeader_pch */

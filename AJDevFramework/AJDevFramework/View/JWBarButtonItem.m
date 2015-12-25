@@ -10,6 +10,8 @@
 #import "CircleView.h"
 #import "NSString+Size.h"
 
+#define kDefaultColor [UIColor colorWithRed:0.980 green:0.365 blue:0.078 alpha:1.000]
+
 static const NSInteger RED_BADGE_TAG = 1001;
 static const CGFloat BAR_BTN_WIDTH = 44.0;
 static const CGFloat BAR_BTN_HEIGHT = 25.0;
@@ -26,7 +28,7 @@ static const CGFloat RED_BADGE_DIAMETER = 10.0;
     [barBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     
     self = [super initWithCustomView:barBtn];
-    self.tintColor = [UIColor colorWithRed:0.980 green:0.365 blue:0.078 alpha:1.000];
+    self.tintColor = kDefaultColor;
     
     return self;
 }
@@ -43,12 +45,12 @@ static const CGFloat RED_BADGE_DIAMETER = 10.0;
     barBtn.frame = CGRectMake(0, 0, width, BAR_BTN_HEIGHT);
     barBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
     barBtn.titleLabel.font = [UIFont systemFontOfSize:15.0];
-    [barBtn setTitleColor:[UIColor colorWithRed:0.980 green:0.365 blue:0.078 alpha:1.000] forState:UIControlStateNormal];
+    [barBtn setTitleColor:kDefaultColor forState:UIControlStateNormal];
     [barBtn setTitle:title forState:UIControlStateNormal];
     [barBtn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     
     self = [super initWithCustomView:barBtn];
-    self.tintColor = [UIColor colorWithRed:0.980 green:0.365 blue:0.078 alpha:1.000];
+    self.tintColor = kDefaultColor;
     
     return self;
 }
@@ -80,6 +82,16 @@ static const CGFloat RED_BADGE_DIAMETER = 10.0;
             redBadge.hidden = YES;
         }
     }
+}
+
+- (void)setShowColor:(UIColor *)showColor
+{
+    _showColor = showColor;
+    
+    UIButton *btn = self.customView;
+    [btn setTitleColor:_showColor forState:UIControlStateNormal];
+    
+    self.tintColor = _showColor;
 }
 
 @end
