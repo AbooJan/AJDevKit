@@ -13,8 +13,11 @@
 		DB19CC821C2B94EB0088A0EA /* DatabaseTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB19CC811C2B94EB0088A0EA /* DatabaseTestViewController.m */; };
 		DB19CC8A1C2B9A160088A0EA /* AJDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DB19CC891C2B9A160088A0EA /* AJDBManager.m */; };
 		DB19CC8D1C2B9B020088A0EA /* AJDBObject.m in Sources */ = {isa = PBXBuildFile; fileRef = DB19CC8C1C2B9B020088A0EA /* AJDBObject.m */; };
-		DB19CC901C2B9FFC0088A0EA /* AJDBArray.m in Sources */ = {isa = PBXBuildFile; fileRef = DB19CC8F1C2B9FFC0088A0EA /* AJDBArray.m */; };
 		DB19CC931C2BCCA40088A0EA /* StudentBean.m in Sources */ = {isa = PBXBuildFile; fileRef = DB19CC921C2BCCA40088A0EA /* StudentBean.m */; };
+		DB241C6F1C2CF28700267207 /* NestedObjTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB241C6E1C2CF28700267207 /* NestedObjTestViewController.m */; };
+		DB241C731C2CF44100267207 /* WeiboStatusBean.m in Sources */ = {isa = PBXBuildFile; fileRef = DB241C721C2CF44100267207 /* WeiboStatusBean.m */; };
+		DB241C761C2CF47800267207 /* TestUserBean.m in Sources */ = {isa = PBXBuildFile; fileRef = DB241C751C2CF47800267207 /* TestUserBean.m */; };
+		DB241C791C2CF48600267207 /* CommentBean.m in Sources */ = {isa = PBXBuildFile; fileRef = DB241C781C2CF48600267207 /* CommentBean.m */; };
 		DB37D43C1C29233B00B81FFC /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DB37D43B1C29233B00B81FFC /* libc++.tbd */; };
 		DB37D44B1C2924BD00B81FFC /* AJHub.m in Sources */ = {isa = PBXBuildFile; fileRef = DB37D4461C2924BD00B81FFC /* AJHub.m */; };
 		DB37D44C1C2924BD00B81FFC /* AJToast.m in Sources */ = {isa = PBXBuildFile; fileRef = DB37D4481C2924BD00B81FFC /* AJToast.m */; };
@@ -151,10 +154,16 @@
 		DB19CC891C2B9A160088A0EA /* AJDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJDBManager.m; sourceTree = "<group>"; };
 		DB19CC8B1C2B9B020088A0EA /* AJDBObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJDBObject.h; sourceTree = "<group>"; };
 		DB19CC8C1C2B9B020088A0EA /* AJDBObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJDBObject.m; sourceTree = "<group>"; };
-		DB19CC8E1C2B9FFC0088A0EA /* AJDBArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJDBArray.h; sourceTree = "<group>"; };
-		DB19CC8F1C2B9FFC0088A0EA /* AJDBArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJDBArray.m; sourceTree = "<group>"; };
 		DB19CC911C2BCCA40088A0EA /* StudentBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentBean.h; sourceTree = "<group>"; };
 		DB19CC921C2BCCA40088A0EA /* StudentBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentBean.m; sourceTree = "<group>"; };
+		DB241C6D1C2CF28700267207 /* NestedObjTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NestedObjTestViewController.h; sourceTree = "<group>"; };
+		DB241C6E1C2CF28700267207 /* NestedObjTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NestedObjTestViewController.m; sourceTree = "<group>"; };
+		DB241C711C2CF44100267207 /* WeiboStatusBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeiboStatusBean.h; sourceTree = "<group>"; };
+		DB241C721C2CF44100267207 /* WeiboStatusBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiboStatusBean.m; sourceTree = "<group>"; };
+		DB241C741C2CF47800267207 /* TestUserBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUserBean.h; sourceTree = "<group>"; };
+		DB241C751C2CF47800267207 /* TestUserBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUserBean.m; sourceTree = "<group>"; };
+		DB241C771C2CF48600267207 /* CommentBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentBean.h; sourceTree = "<group>"; };
+		DB241C781C2CF48600267207 /* CommentBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentBean.m; sourceTree = "<group>"; };
 		DB37D43B1C29233B00B81FFC /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		DB37D4451C2924BD00B81FFC /* AJHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AJHub.h; sourceTree = "<group>"; };
 		DB37D4461C2924BD00B81FFC /* AJHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AJHub.m; sourceTree = "<group>"; };
@@ -387,12 +396,23 @@
 				DB19CC891C2B9A160088A0EA /* AJDBManager.m */,
 				DB19CC8B1C2B9B020088A0EA /* AJDBObject.h */,
 				DB19CC8C1C2B9B020088A0EA /* AJDBObject.m */,
-				DB19CC8E1C2B9FFC0088A0EA /* AJDBArray.h */,
-				DB19CC8F1C2B9FFC0088A0EA /* AJDBArray.m */,
 				DB10491D1C2C07AC003FB479 /* AJSortFilter.h */,
 				DB10491E1C2C07AC003FB479 /* AJSortFilter.m */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		DB241C701C2CF3BB00267207 /* NestedObj */ = {
+			isa = PBXGroup;
+			children = (
+				DB241C711C2CF44100267207 /* WeiboStatusBean.h */,
+				DB241C721C2CF44100267207 /* WeiboStatusBean.m */,
+				DB241C741C2CF47800267207 /* TestUserBean.h */,
+				DB241C751C2CF47800267207 /* TestUserBean.m */,
+				DB241C771C2CF48600267207 /* CommentBean.h */,
+				DB241C781C2CF48600267207 /* CommentBean.m */,
+			);
+			name = NestedObj;
 			sourceTree = "<group>";
 		};
 		DB37D43D1C2923B900B81FFC /* Library */ = {
@@ -798,6 +818,7 @@
 		DB4431071C2AA127009FCA8E /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				DB241C701C2CF3BB00267207 /* NestedObj */,
 				DB19CC801C2B94EB0088A0EA /* DatabaseTestViewController.h */,
 				DB19CC811C2B94EB0088A0EA /* DatabaseTestViewController.m */,
 				DB19CC911C2BCCA40088A0EA /* StudentBean.h */,
@@ -806,6 +827,8 @@
 				DB1049181C2BE687003FB479 /* QueryDataViewController.m */,
 				DB10491A1C2BE728003FB479 /* UpdateViewController.h */,
 				DB10491B1C2BE728003FB479 /* UpdateViewController.m */,
+				DB241C6D1C2CF28700267207 /* NestedObjTestViewController.h */,
+				DB241C6E1C2CF28700267207 /* NestedObjTestViewController.m */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -1088,6 +1111,8 @@
 				DB37D44D1C2924BD00B81FFC /* AJToastViewController.m in Sources */,
 				DB37D51F1C293D6200B81FFC /* ObjectBeanBase.m in Sources */,
 				DBF344ED1C2A50E1002BC53A /* CorePagesBarView.m in Sources */,
+				DB241C731C2CF44100267207 /* WeiboStatusBean.m in Sources */,
+				DB241C791C2CF48600267207 /* CommentBean.m in Sources */,
 				DB37D4AB1C2933DC00B81FFC /* JWBarButtonItem.m in Sources */,
 				DB37D4BC1C29344300B81FFC /* UICountingLabel.m in Sources */,
 				DB37D4A21C2933AE00B81FFC /* CircleView.m in Sources */,
@@ -1113,7 +1138,7 @@
 				DB37D4941C2932E500B81FFC /* BaseTextField.m in Sources */,
 				DB37D5101C29357D00B81FFC /* YTKRequest.m in Sources */,
 				DB3AACB81C27FF5F00378E8E /* AppDelegate.m in Sources */,
-				DB19CC901C2B9FFC0088A0EA /* AJDBArray.m in Sources */,
+				DB241C761C2CF47800267207 /* TestUserBean.m in Sources */,
 				DBF344F51C2A7E13002BC53A /* NetworkTestViewController.m in Sources */,
 				DB37D4BF1C29345A00B81FFC /* BaseWebViewController.m in Sources */,
 				DB37D4801C292A9600B81FFC /* EXTSelectorChecking.m in Sources */,
@@ -1140,6 +1165,7 @@
 				DB19CC8D1C2B9B020088A0EA /* AJDBObject.m in Sources */,
 				DB37D4681C2929BE00B81FFC /* UIImage+ImageCompress.m in Sources */,
 				DBF344FB1C2A7EA0002BC53A /* UIViewController+EmptyTableView.m in Sources */,
+				DB241C6F1C2CF28700267207 /* NestedObjTestViewController.m in Sources */,
 				DB4431041C2A8B71009FCA8E /* RequestSearchTel.m in Sources */,
 				DB37D4ED1C2934D000B81FFC /* AJTextView.m in Sources */,
 				DB37D49A1C29336600B81FFC /* AJPickerButton.m in Sources */,

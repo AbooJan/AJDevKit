@@ -150,6 +150,19 @@ AppStore评分封装库    		| iRate 		     | `1.11.4`
 + (void)clear;
 ```
 
+* 对应条件查询接口，可以根据断言条件语句查询，更多用法可以参考苹果官方文档: [NSPredicate](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/Predicates/AdditionalChapters/Introduction.html)
+
+* 对于一个数据模型中包含有另一个模型个数组，定义方法如下：
+
+```
+1.在数组包含的那个模型里面添加宏定义: RLM_ARRAY_TYPE(ClassName)
+2.在包含数组的那个模型里面这样定义数组：@property RLMArray<ObjectType *><ObjectType> *arrayOfObjectTypes 
+3.更多详细用法可以参考示例程序
+```
+
+
+
+
 
 
 

@@ -11,6 +11,7 @@
 #import "JWBarButtonItem.h"
 #import "UpdateViewController.h"
 #import "QueryDataViewController.h"
+#import "NestedObjTestViewController.h"
 
 @interface DatabaseTestViewController () <UITableViewDataSource, UITableViewDelegate, UpdateViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -214,6 +215,11 @@
 - (IBAction)cleanBtnClick:(id)sender
 {
     [self cleanData];
+}
+- (IBAction)nestedBtnClick:(id)sender
+{
+    NestedObjTestViewController *nestedVC = [MAIN_STORYBOARD instantiateViewControllerWithIdentifier:@"NestedObjTestViewController"];
+    [self pushVC:nestedVC];
 }
 
 @end
