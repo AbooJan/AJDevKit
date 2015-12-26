@@ -67,11 +67,6 @@ AppStore评分封装库    		| iRate 		     | `1.11.4`
 #### 关于数据库
 
 * 所有需要写入数据库的类需要继承自：`AJDBObject` 。  并且必须要实现方法: `primaryKey`，用来定义主键。
-* 如果继承自 `AJDBObject` 的类里面包含了一个数组类型，定义的时候需要这样定义：
-
- 	```objective-c
-  	@property AJDBArray<数组类名 *> *变量名;  
-  	```
 
 * 所有数据库事务操作通过 `AJDBManager` 类。接口有:
 
