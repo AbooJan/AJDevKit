@@ -69,13 +69,13 @@ AppStore评分封装库    		| iRate 		     | `1.11.4`
 * 所有需要写入数据库的类需要继承自：`AJDBObject` 。  并且必须要实现方法: `primaryKey`，用来定义主键。
 * 如果继承自 `AJDBObject` 的类里面包含了一个数组类型，定义的时候需要这样定义：
 
- 	```
+ 	```objective-c
   	@property AJDBArray<数组类名 *> *变量名;  
   	```
 
 * 所有数据库事务操作通过 `AJDBManager` 类。接口有:
 
-```
+```objective-c
 /**
  *  写入一条数据
  *
@@ -154,7 +154,7 @@ AppStore评分封装库    		| iRate 		     | `1.11.4`
 
 * 对于一个数据模型中包含有另一个模型个数组，定义方法如下：
 
-```
+```objective-c
 1.在数组包含的那个模型里面添加宏定义: RLM_ARRAY_TYPE(ClassName)
 2.在包含数组的那个模型里面这样定义数组：@property RLMArray<ObjectType *><ObjectType> *arrayOfObjectTypes 
 3.更多详细用法可以参考示例程序
