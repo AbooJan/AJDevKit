@@ -20,9 +20,15 @@
     return instance;
 }
 
++ (void)checkClazz:(Class)clazz
+{
+    BOOL isCorrectClass = [[clazz new] isKindOfClass:[AJDBObject class]];
+    NSAssert(isCorrectClass, @"必须继承自AJDBObject");
+}
+
 #pragma mark - 写入
 
-+ (void)writeObj:(AJDBObject *)obj
++ (void)writeObj:(__kindof AJDBObject *)obj
 {
     RLMRealm *realm = [RLMRealm defaultRealm];
     [realm beginWriteTransaction];
@@ -51,7 +57,7 @@
 
 #pragma mark - 删除
 
-+ (void)deleteObj:(AJDBObject *)obj
++ (void)deleteObj:(__kindof AJDBObject *)obj
 {
     RLMRealm *realm = [RLMRealm defaultRealm];
     [realm beginWriteTransaction];
@@ -62,9 +68,11 @@
 
 #pragma mark - 查询
 
-+ (NSArray<AJDBObject *> *)queryAllObj:(AJDBObject *)obj
++ (NSArray<__kindof AJDBObject *> *)queryAllObj:(Class)clazz
 {
-    RLMResults<AJDBObject *> *queryResult = [[obj class] allObjects];
+    [AJDBManager checkClazz:clazz];
+    
+    RLMResults<AJDBObject *> *queryResult = [clazz allObjects];
     NSMutableArray *resultArray = [NSMutableArray array];
     for (NSInteger i = 0; i < queryResult.count; i ++) {
         
@@ -76,9 +84,11 @@
     return resultArray;
 }
 
-+ (NSArray<AJDBObject *> *)queryObjWithPredicate:(NSPredicate *)predicate targetObj:(AJDBObject *)obj
++ (NSArray<__kindof AJDBObject *> *)queryObjWithPredicate:(NSPredicate *)predicate targetClass:(Class)clazz
 {
-    RLMResults<AJDBObject *> *queryResult = [[obj class] objectsWithPredicate:predicate];
+    [AJDBManager checkClazz:clazz];
+    
+    RLMResults<AJDBObject *> *queryResult = [clazz objectsWithPredicate:predicate];
     NSMutableArray *resultArray = [NSMutableArray array];
     for (NSInteger i = 0; i < queryResult.count; i ++) {
         
@@ -90,9 +100,11 @@
     return resultArray;
 }
 
-+ (NSArray<AJDBObject *> *)queryObjWithPredicate:(NSPredicate *)predicate targetObj:(AJDBObject *)obj sortFilter:(AJSortFilter *)sortFilter
++ (NSArray<__kindof AJDBObject *> *)queryObjWithPredicate:(NSPredicate *)predicate sortFilter:(AJSortFilter *)sortFilter targetClass:(Class)clazz;
 {
-    RLMResults<AJDBObject *> *queryResult = [[[obj class] objectsWithPredicate:predicate]
+    [AJDBManager checkClazz:clazz];
+    
+    RLMResults<AJDBObject *> *queryResult = [[clazz objectsWithPredicate:predicate]
                                              sortedResultsUsingProperty:sortFilter.sortPropertyName
                                              ascending:sortFilter.ascending];
     
@@ -107,9 +119,11 @@
     return resultArray;
 }
 
-+ (AJDBObject *)queryObjWithPrimaryKeyValue:(id)primaryKey targetObj:(AJDBObject *)obj
++ (__kindof AJDBObject *)queryObjWithPrimaryKeyValue:(id)primaryKey targetClass:(Class)clazz;
 {
-    AJDBObject *queryObj = [[obj class] objectForPrimaryKey:primaryKey];
+    [AJDBManager checkClazz:clazz];
+    
+    AJDBObject *queryObj = [clazz objectForPrimaryKey:primaryKey];
     
     return queryObj;
 }

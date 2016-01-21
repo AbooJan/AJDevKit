@@ -80,7 +80,7 @@
     NSString *primaryKey = self.primaryKeyTF.text;
     if (!isEmptyString(primaryKey)) {
         
-        StudentBean *student = (StudentBean *)[AJDBManager queryObjWithPrimaryKeyValue:@([primaryKey integerValue]) targetObj:[StudentBean new]];
+        StudentBean *student = [AJDBManager queryObjWithPrimaryKeyValue:@([primaryKey integerValue]) targetClass:[StudentBean class]];
         
         if (student) {
             
@@ -104,7 +104,7 @@
     
     // 不排序的查询
 //    NSPredicate *query1 = [NSPredicate predicateWithFormat:@"age > %d", 25];
-//    NSArray *queryResult = [AJDBManager queryObjWithPredicate:query1 targetObj:[StudentBean new]];
+//    NSArray *queryResult = [AJDBManager queryObjWithPredicate:query1 targetClass:[StudentBean class]];
 //    
 //    if (queryResult.count > 0) {
 //        [self.studentArray removeAllObjects];
@@ -117,7 +117,7 @@
     // 排序查询
     NSPredicate *query2 = [NSPredicate predicateWithFormat:@"height >= %f", 166.0f];
     AJSortFilter *sortFilter = [AJSortFilter sortFilterWithPropertyName:@"age" ascending:NO];
-    NSArray *queryResult = [AJDBManager queryObjWithPredicate:query2 targetObj:[StudentBean new] sortFilter:sortFilter];
+    NSArray *queryResult = [AJDBManager queryObjWithPredicate:query2 sortFilter:sortFilter targetClass:[StudentBean class]];
     
     if (queryResult.count > 0) {
         [self.studentArray removeAllObjects];

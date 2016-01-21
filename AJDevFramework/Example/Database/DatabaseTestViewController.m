@@ -122,7 +122,7 @@
 #pragma mark 查询所有数据
 - (void)refreshData
 {
-    self.studentArray = [AJDBManager queryAllObj:[StudentBean new]];
+    self.studentArray = [AJDBManager queryAllObj:[StudentBean class]];
     
     [self.tableView reloadData];
 }

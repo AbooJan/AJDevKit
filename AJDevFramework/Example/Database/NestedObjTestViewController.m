@@ -74,7 +74,7 @@
 
 - (IBAction)readBtnClick:(id)sender
 {
-    NSArray *weiboArray = [AJDBManager queryAllObj:[WeiboStatusBean new]];
+    NSArray *weiboArray = [AJDBManager queryAllObj:[WeiboStatusBean class]];
     
     WeiboStatusBean *weibo = weiboArray[0];
     
