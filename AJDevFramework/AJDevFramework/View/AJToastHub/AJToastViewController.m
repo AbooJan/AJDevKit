@@ -55,7 +55,7 @@ static const CGFloat DEFAULT_ALPHA  = 0.7;
 
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
-    return UIStatusBarStyleDefault;
+    return [UIApplication sharedApplication].statusBarStyle;
 }
 
 - (void)viewDidLoad {

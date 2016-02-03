@@ -17,23 +17,34 @@
  * from Realm Incorporated.
  *
  **************************************************************************/
-#ifndef REALM_TABLE_BASIC_FWD_HPP
-#define REALM_TABLE_BASIC_FWD_HPP
+#ifndef REALM_UTIL_MISCELLANEOUS_HPP
+#define REALM_UTIL_MISCELLANEOUS_HPP
+
+#include <type_traits>
 
 namespace realm {
+namespace util {
 
+// FIXME: Replace this with std::add_const_t when we switch over to C++14 by
+// default.
+/// \brief Adds const qualifier, unless T already has the const qualifier
+template <class T>
+using add_const_t = typename std::add_const<T>::type;
 
-template<class Spec>
-class BasicTable;
+// FIXME: Replace this with std::as_const when we switch over to C++17 by
+// default.
+/// \brief Forms an lvalue reference to const T
+template <class T>
+constexpr add_const_t<T>& as_const(T& v) noexcept
+{
+    return v;
+}
 
-template<class T>
-struct IsBasicTable { static const bool value = false; };
-template<class Spec>
-struct IsBasicTable<BasicTable<Spec>> { static const bool value = true; };
-template<class Spec>
-struct IsBasicTable<const BasicTable<Spec>> { static const bool value = true; };
+/// \brief Disallows rvalue arguments
+template <class T>
+add_const_t<T>& as_const(const T&&) = delete;
 
-
+} // namespace util
 } // namespace realm
 
-#endif // REALM_TABLE_BASIC_FWD_HPP
+#endif // REALM_UTIL_MISCELLANEOUS_HPP
