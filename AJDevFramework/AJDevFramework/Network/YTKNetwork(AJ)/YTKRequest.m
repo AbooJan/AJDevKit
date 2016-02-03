@@ -24,6 +24,7 @@
 #import "YTKNetworkConfig.h"
 #import "YTKRequest.h"
 #import "YTKNetworkPrivate.h"
+#import "MJExtension.h"
 
 @interface YTKRequest()
 
@@ -232,7 +233,13 @@
 
 - (void)requestCompleteFilter {
     [super requestCompleteFilter];
-    [self saveJsonResponseToCacheFile:[super responseJSONObject]];
+    
+    id responseObj = [super responseJSONObject];
+    if (!responseObj) {
+        responseObj = [[super responseString] mj_JSONObject];
+    }
+    
+    [self saveJsonResponseToCacheFile:responseObj];
 }
 
 // 手动将其他请求的JsonResponse写入该请求的缓存
