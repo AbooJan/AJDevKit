@@ -229,6 +229,17 @@
     }
 }
 
+/// 重写模型返回方法
+- (ResponseBeanBase *)responseBean
+{
+    if (self.isDataFromCache) {
+        // 来自缓存
+        return [self responseBeanWithJSON:_cacheJson];
+    }else{
+        return [super responseBean];
+    }
+}
+
 #pragma mark - Network Request Delegate
 
 - (void)requestCompleteFilter {

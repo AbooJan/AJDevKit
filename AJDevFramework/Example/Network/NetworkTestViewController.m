@@ -23,6 +23,15 @@
     [super viewDidLoad];
 }
 
+- (void)handleResponse:(ResponseBeanSearchTel *)response
+{
+    TelInfo *tel = response.retData;
+    
+    NSString *result = [NSString stringWithFormat:@"手机号码： %@\n省份：%@\n运营商：%@\n", tel.telString, tel.province, tel.carrier];
+    
+    _resultLabel.text = result;
+}
+
 - (IBAction)searchBtnClick:(id)sender
 {
     [[AJHub shareInstance] showHub:@""];
@@ -33,17 +42,25 @@
     // 忽略测试
     requestBean.telNum = 1008611;
     
+    // 读取缓存数据
+    if ([requestBean cacheJson]) {
+        NSDictionary *jsonDic = [[requestBean cacheJson] mj_JSONObject];
+        ResponseBeanSearchTel *response = [ResponseBeanSearchTel mj_objectWithKeyValues:jsonDic];
+        [self handleResponse:response];
+        
+        NSLog(@"显示缓存");
+    }
+    
+//    requestBean.ignoreCache = YES;
     [requestBean startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
         
         [[AJHub shareInstance] dismiss];
         
-        ResponseBeanSearchTel *response = (ResponseBeanSearchTel *)request.responseBean;
+        NSLog(@"请求结果是否来自缓存: %d \n\n", requestBean.isDataFromCache);
         
-        TelInfo *tel = response.retData;
+        ResponseBeanSearchTel *response = request.responseBean;
         
-        NSString *result = [NSString stringWithFormat:@"手机号码： %@\n省份：%@\n运营商：%@\n", tel.telString, tel.province, tel.carrier];
-        
-        _resultLabel.text = result;
+        [self handleResponse:response];
         
     } failure:^(YTKBaseRequest *request) {
         

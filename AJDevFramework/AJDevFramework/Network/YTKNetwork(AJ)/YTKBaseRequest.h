@@ -24,6 +24,7 @@
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
 #import "AFDownloadRequestOperation.h"
+#import "ResponseBeanBase.h"
 
 typedef NS_ENUM(NSInteger , YTKRequestMethod) {
     YTKRequestMethodGet = 0,
@@ -179,7 +180,9 @@ typedef void (^AFDownloadProgressBlock)(AFDownloadRequestOperation *operation, N
 
 
 /// 请求返回结果
-@property (nonatomic, strong, readonly) id responseBean;
+@property (nonatomic, strong, readonly) __kindof ResponseBeanBase *responseBean;
+/// 返回模型
+- (__kindof ResponseBeanBase *)responseBeanWithJSON:(NSString *)json;
 
 /**
  *  忽略的参数列表

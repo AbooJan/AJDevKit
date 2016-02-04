@@ -24,4 +24,10 @@
     return @{@"tel_local" : @"tel"};
 }
 
+- (NSInteger)cacheTimeInSeconds
+{
+    // 2 秒内，重复请求，会直接读缓存（如果存在），不真正发起新的请求
+    return 10.0;
+}
+
 @end

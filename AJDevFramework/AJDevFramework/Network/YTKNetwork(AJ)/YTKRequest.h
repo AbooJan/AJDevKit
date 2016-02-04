@@ -42,6 +42,7 @@
 /// 手动将其他请求的JsonResponse写入该请求的缓存
 - (void)saveJsonResponseToCacheFile:(id)jsonResponse;
 
+/// 当发起请求的时候，如果缓存时间没有过，会直接读缓存，不真正发起请求
 /// For subclass to overwrite
 - (NSInteger)cacheTimeInSeconds;
 - (long long)cacheVersion;

@@ -226,7 +226,12 @@
 
 
 #pragma mark JSON 解析
-- (id)responseBean
+- (ResponseBeanBase *)responseBean
+{
+    return [self responseBeanWithJSON:self.responseString];
+}
+
+- (ResponseBeanBase *)responseBeanWithJSON:(NSString *)json
 {
     const char *requestClassName = class_getName([self class]);
     
@@ -234,7 +239,7 @@
     
     const char *responseBeanName1 = [responseBeanName UTF8String];
     
-    NSString *values = self.responseString;
+    NSString *values = json;
     
     id response = [objc_getClass(responseBeanName1) mj_objectWithKeyValues:values];
     
