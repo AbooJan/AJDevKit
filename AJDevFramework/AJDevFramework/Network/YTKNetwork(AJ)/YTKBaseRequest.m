@@ -268,4 +268,44 @@
     return nil;
 }
 
+#pragma mark - 额外处理网络请求结果
+
+- (void)extendHandleRequestSuccess
+{
+    // hub
+    if (self.showHub) {
+        [[AJHub shareInstance] dismiss];
+    }
+    
+    // log消息
+    NSString *url = [NSString stringWithFormat:@"%@%@", [self baseUrl], [self requestUrl]];
+    DLog(@"\n=======end request success=======\n\nURL: %@\n\nResult:\n%@\n\n ======= end ======= \n", url, [self.responseBean description]);
+}
+
+- (void)extendHandleRequestFailure
+{
+    // hub
+    if (self.showHub) {
+        [[AJHub shareInstance] dismiss];
+    }
+    
+    // log消息
+    NSString *url = [NSString stringWithFormat:@"%@%@", [self baseUrl], [self requestUrl]];
+    NSString *value = self.responseString;
+    
+    YTKLog(@"\n=======end request failure=======\n\nURL: %@\n\nCode: %ld\n\nResult:\n%@\n\n ======= end ======= \n", url, (long)self.responseStatusCode,value);
+}
+
+- (void)handleHub
+{
+    // Hub
+    if (self.showHub) {
+        if (self.hubMsg != nil && ![self.hubMsg isEqualToString:@""]){
+            [[AJHub shareInstance] showHub:self.hubMsg];
+        }else{
+            [[AJHub shareInstance] showHub:@""];
+        }
+    }
+}
+
 @end

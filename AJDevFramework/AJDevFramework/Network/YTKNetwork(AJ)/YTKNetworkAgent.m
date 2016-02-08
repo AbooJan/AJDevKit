@@ -204,7 +204,7 @@
         }
     }
     
-    YTKLog(@"\n=======start request=======\n\nAdd request: %@\n\nURL: %@\n\nParams：%@\n\n ======= end ======= \n", NSStringFromClass([request class]), url, param);
+    DLog(@"\n=======start request=======\n\nAdd request: %@\n\nURL: %@\n\nParams：%@\n\n ======= end ======= \n", NSStringFromClass([request class]), url, param);
     
     [self addOperation:request];
 }
@@ -241,6 +241,7 @@
     YTKBaseRequest *request = _requestsRecord[key];
 
     if (request) {
+        
         BOOL succeed = [self checkResult:request];
         if (succeed) {
             [request toggleAccessoriesWillStopCallBack];
@@ -258,7 +259,7 @@
             [request toggleAccessoriesDidStopCallBack];
             
             // 额外成功处理逻辑
-            [self handleRequestSuccess:request];
+            [request extendHandleRequestSuccess];
             
         } else {
 
@@ -276,7 +277,7 @@
             [request toggleAccessoriesDidStopCallBack];
             
             // 额外处理逻辑
-            [self handleRequestFailure:request];
+            [request extendHandleRequestFailure];
         }
     }
     [self removeOperation:operation];
@@ -303,24 +304,6 @@
         [_requestsRecord removeObjectForKey:key];
     }
     YTKLog(@"Request queue size = %lu", (unsigned long)[_requestsRecord count]);
-}
-
-#pragma mark - 额外处理网络请求结果
-
-- (void)handleRequestSuccess:(YTKBaseRequest *)request
-{
-    NSString *url = [self buildRequestUrl:request];
-//    NSString *value = request.responseString;
-    
-    YTKLog(@"\n=======end request success=======\n\nURL: %@\n\nResult:\n%@\n\n ======= end ======= \n", url, [request.responseBean description]);
-}
-
-- (void)handleRequestFailure:(YTKBaseRequest *)request
-{
-    NSString *url = [self buildRequestUrl:request];
-    NSString *value = request.responseString;
-    
-    YTKLog(@"\n=======end request failure=======\n\nURL: %@\n\nCode: %ld\n\nResult:\n%@\n\n ======= end ======= \n", url, (long)request.responseStatusCode,value);
 }
 
 @end

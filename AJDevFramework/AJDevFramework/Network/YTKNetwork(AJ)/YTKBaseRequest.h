@@ -87,7 +87,10 @@ typedef void (^AFDownloadProgressBlock)(AFDownloadRequestOperation *operation, N
 
 @property (nonatomic, strong, readonly) id responseJSONObject;
 
-
+/// 请求返回结果
+@property (nonatomic, strong, readonly) __kindof ResponseBeanBase *responseBean;
+@property (nonatomic,assign) BOOL showHub;
+@property (copy, nonatomic) NSString *hubMsg;
 
 @property (nonatomic, readonly) NSInteger responseStatusCode;
 
@@ -118,8 +121,8 @@ typedef void (^AFDownloadProgressBlock)(AFDownloadRequestOperation *operation, N
 /// Request Accessory，可以hook Request的start和stop
 - (void)addAccessory:(id<YTKRequestAccessory>)accessory;
 
+#pragma mark - 子类继承覆盖方法
 /// 以下方法由子类继承来覆盖默认值
-
 /// 请求成功的回调
 - (void)requestCompleteFilter;
 
@@ -178,12 +181,6 @@ typedef void (^AFDownloadProgressBlock)(AFDownloadRequestOperation *operation, N
 /// 当需要断点续传时，获得下载进度的回调
 - (AFDownloadProgressBlock)resumableDownloadProgressBlock;
 
-
-/// 请求返回结果
-@property (nonatomic, strong, readonly) __kindof ResponseBeanBase *responseBean;
-/// 返回模型
-- (__kindof ResponseBeanBase *)responseBeanWithJSON:(NSString *)json;
-
 /**
  *  忽略的参数列表
  *
@@ -200,5 +197,12 @@ typedef void (^AFDownloadProgressBlock)(AFDownloadRequestOperation *operation, N
  */
 - (NSDictionary *)configArguments;
 
+
+#pragma mark - 共用方法
+/// 返回模型
+- (__kindof ResponseBeanBase *)responseBeanWithJSON:(NSString *)json;
+- (void)extendHandleRequestSuccess;
+- (void)extendHandleRequestFailure;
+- (void)handleHub;
 
 @end

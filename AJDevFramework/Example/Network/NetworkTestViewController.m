@@ -34,10 +34,12 @@
 
 - (IBAction)searchBtnClick:(id)sender
 {
-    [[AJHub shareInstance] showHub:@""];
+//    [[AJHub shareInstance] showHub:@""];
     
     RequestBeanSearchTel *requestBean = [[RequestBeanSearchTel alloc] init];
     requestBean.tel_local = _phoneTF.text;
+    requestBean.showHub = YES;
+//    requestBean.hubMsg = @"获取中...";
     
     // 忽略测试
     requestBean.telNum = 1008611;
@@ -47,14 +49,12 @@
         NSDictionary *jsonDic = [[requestBean cacheJson] mj_JSONObject];
         ResponseBeanSearchTel *response = [ResponseBeanSearchTel mj_objectWithKeyValues:jsonDic];
         [self handleResponse:response];
-        
-        NSLog(@"显示缓存");
     }
     
 //    requestBean.ignoreCache = YES;
     [requestBean startWithCompletionBlockWithSuccess:^(YTKBaseRequest *request) {
         
-        [[AJHub shareInstance] dismiss];
+//        [[AJHub shareInstance] dismiss];
         
         NSLog(@"请求结果是否来自缓存: %d \n\n", requestBean.isDataFromCache);
         

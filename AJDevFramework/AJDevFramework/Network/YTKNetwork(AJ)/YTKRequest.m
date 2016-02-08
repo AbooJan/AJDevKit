@@ -140,6 +140,9 @@
 }
 
 - (void)start {
+    
+    [self handleHub];
+    
     if (self.ignoreCache) {
         [super start];
         return;
@@ -187,6 +190,8 @@
     if (strongSelf.successCompletionBlock) {
         strongSelf.successCompletionBlock(strongSelf);
     }
+    [self extendHandleRequestSuccess];
+    
     [strongSelf clearCompletionBlock];
 }
 
