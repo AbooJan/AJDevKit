@@ -14,9 +14,9 @@
 
 @property (strong, nonatomic) UserBean *baseUserBean;
 
--(void)initView;
+-(void)initView NS_REQUIRES_SUPER;
 
--(void)initData;
+-(void)initData NS_REQUIRES_SUPER;
 
 - (void)pushVC:(UIViewController *)controller;
 - (void)pushVCNoAnimation:(UIViewController *)controller;
