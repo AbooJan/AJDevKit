@@ -278,8 +278,9 @@
     }
     
     // log消息
+    NSDictionary *responseDic = [self.responseString mj_JSONObject];
     NSString *url = [NSString stringWithFormat:@"%@%@", [self baseUrl], [self requestUrl]];
-    DLog(@"\n=======end request success=======\n\nURL: %@\n\nResult:\n%@\n\n ======= end ======= \n", url, [self.responseBean description]);
+    DLog(@"\n=======end request success=======\n\nURL: %@\n\nResult:\n%@\n\n ======= end ======= \n", url, responseDic);
 }
 
 - (void)extendHandleRequestFailure
@@ -290,10 +291,9 @@
     }
     
     // log消息
+    NSDictionary *responseDic = [self.responseString mj_JSONObject];
     NSString *url = [NSString stringWithFormat:@"%@%@", [self baseUrl], [self requestUrl]];
-    NSString *value = self.responseString;
-    
-    YTKLog(@"\n=======end request failure=======\n\nURL: %@\n\nCode: %ld\n\nResult:\n%@\n\n ======= end ======= \n", url, (long)self.responseStatusCode,value);
+    DLog(@"\n=======end request failure=======\n\nURL: %@\n\nCode: %ld\n\nResult:\n%@\n\n ======= end ======= \n", url, (long)self.responseStatusCode,responseDic);
 }
 
 - (void)handleHub
