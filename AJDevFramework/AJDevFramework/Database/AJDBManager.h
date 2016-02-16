@@ -41,6 +41,13 @@
 + (void)deleteObj:(__kindof AJDBObject *)obj;
 
 /**
+ *  在数据库中删除目标数组数据
+ *
+ *  @param objs 需要删除的数据数组
+ */
++ (void)deleteObjs:(NSArray<__kindof AJDBObject *> *)objs;
+
+/**
  *  查询目标数据模型的所有存储数据
  *
  *  @param clazz 需要查询的目标类

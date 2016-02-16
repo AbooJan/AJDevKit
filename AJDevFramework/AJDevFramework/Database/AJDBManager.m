@@ -65,6 +65,13 @@
     [realm commitWriteTransaction];
 }
 
++ (void)deleteObjs:(NSArray<__kindof AJDBObject *> *)objs
+{
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    [realm beginWriteTransaction];
+    [realm deleteObjects:objs];
+    [realm commitWriteTransaction];
+}
 
 #pragma mark - 查询
 
