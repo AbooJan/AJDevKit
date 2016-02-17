@@ -7,6 +7,7 @@
 //
 
 #import "UpdateViewController.h"
+#import "DogBean.h"
 
 @interface UpdateViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameTF;
@@ -50,4 +51,30 @@
     
     [self popVC];
 }
+
+#pragma mark - 批量写入删除测试
+
+- (IBAction)writeArrayBtnClick:(UIButton *)sender
+{
+    NSMutableArray *dogArray = [NSMutableArray array];
+    for (int i = 0; i < 6; i++) {
+        DogBean *dog1 = [[DogBean alloc] init];
+        dog1.ID = 100+i;
+        dog1.name = [NSString stringWithFormat:@"dog%ld", (long)(100+i)];
+        
+        [dogArray addObject:dog1];
+    }
+    
+    [AJDBManager writeObjArray:dogArray];
+}
+
+- (IBAction)deleteArrayBtnClick:(id)sender
+{
+    NSArray *dogArray = [AJDBManager queryAllObj:[DogBean class]];
+    
+    if (dogArray.count > 0) {
+        [AJDBManager deleteObjs:dogArray];
+    }
+}
+
 @end

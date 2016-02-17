@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC0315B71C74AC2E008DEBBE /* DogBean.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0315B61C74AC2E008DEBBE /* DogBean.m */; };
 		DB1049191C2BE687003FB479 /* QueryDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB1049181C2BE687003FB479 /* QueryDataViewController.m */; };
 		DB10491C1C2BE728003FB479 /* UpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10491B1C2BE728003FB479 /* UpdateViewController.m */; };
 		DB10491F1C2C07AC003FB479 /* AJSortFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = DB10491E1C2C07AC003FB479 /* AJSortFilter.m */; };
@@ -141,6 +142,8 @@
 /* Begin PBXFileReference section */
 		002156300EF63F28AAAB09CA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B1A644710FC572909794E9 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CC0315B51C74AC2E008DEBBE /* DogBean.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogBean.h; sourceTree = "<group>"; };
+		CC0315B61C74AC2E008DEBBE /* DogBean.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogBean.m; sourceTree = "<group>"; };
 		CE9539B5A3ADB1FE4519EDA3 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DB1049171C2BE687003FB479 /* QueryDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryDataViewController.h; sourceTree = "<group>"; };
 		DB1049181C2BE687003FB479 /* QueryDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryDataViewController.m; sourceTree = "<group>"; };
@@ -829,6 +832,8 @@
 				DB10491B1C2BE728003FB479 /* UpdateViewController.m */,
 				DB241C6D1C2CF28700267207 /* NestedObjTestViewController.h */,
 				DB241C6E1C2CF28700267207 /* NestedObjTestViewController.m */,
+				CC0315B51C74AC2E008DEBBE /* DogBean.h */,
+				CC0315B61C74AC2E008DEBBE /* DogBean.m */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -1185,6 +1190,7 @@
 				DB37D4EE1C2934D000B81FFC /* AJTextViewEextend.m in Sources */,
 				DBF344EC1C2A50E1002BC53A /* CorePagesBarBtn.m in Sources */,
 				DB37D4541C29259800B81FFC /* AJPopupView.m in Sources */,
+				CC0315B71C74AC2E008DEBBE /* DogBean.m in Sources */,
 				DB3AACB51C27FF5F00378E8E /* main.m in Sources */,
 				DBF344FC1C2A7EA0002BC53A /* UIViewController+MJRefresh.m in Sources */,
 				DB37D50A1C29357D00B81FFC /* YTKBatchRequestAgent.m in Sources */,
