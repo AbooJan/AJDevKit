@@ -281,6 +281,17 @@
     NSDictionary *responseDic = [self.responseString mj_JSONObject];
     NSString *url = [NSString stringWithFormat:@"%@%@", [self baseUrl], [self requestUrl]];
     DLog(@"\n=======end request success=======\n\nURL: %@\n\nResult:\n%@\n\n ======= end ======= \n", url, responseDic);
+    
+    //TODO: Toast 处理
+//    ResponseBeanBase *baseResponse = self.responseBean;
+//    if (baseResponse.code == SUCCESS_CODE) {
+//        // 成功
+//    }else{
+//        // 失败Toast
+//        if (baseResponse.msg) {
+//            [[AJToast shareInstance] showMessage:baseResponse.msg];
+//        }
+//    }
 }
 
 - (void)extendHandleRequestFailure
@@ -294,6 +305,10 @@
     NSDictionary *responseDic = [self.responseString mj_JSONObject];
     NSString *url = [NSString stringWithFormat:@"%@%@", [self baseUrl], [self requestUrl]];
     DLog(@"\n=======end request failure=======\n\nURL: %@\n\nCode: %ld\n\nResult:\n%@\n\n ======= end ======= \n", url, (long)self.responseStatusCode,responseDic);
+    
+    
+     //TODO: Toast 处理
+//    [[AJToast shareInstance] showMessage:@"网络不给力~"];
 }
 
 - (void)handleHub
