@@ -8,14 +8,35 @@
 
 #import "AJDBManager.h"
 
+@interface AJDBManager()
+@property (nonatomic,strong) RLMRealm *realm;
+@end
+
 @implementation AJDBManager
 
 + (AJDBManager *)sharedInstance
 {
     static dispatch_once_t onceToken;
-    static AJDBManager * instance; \
+    static AJDBManager * instance;
     dispatch_once( &onceToken, ^{
+        
         instance = [[AJDBManager alloc] init];
+        
+        // 不使用加密
+//        instance.realm = [RLMRealm defaultRealm];
+        
+        // 64位AES-256+SHA2加密
+        NSMutableData *key = [NSMutableData dataWithLength:64];
+        (void)SecRandomCopyBytes(kSecRandomDefault, key.length, (uint8_t *)key.mutableBytes);
+        
+        RLMRealmConfiguration *realmConfig = [RLMRealmConfiguration defaultConfiguration];
+        realmConfig.encryptionKey = key;
+        NSError *error = nil;
+        instance.realm = [RLMRealm realmWithConfiguration:realmConfig error:&error];
+        if (!instance.realm) {
+            NSLog(@"Error opening realm: %@", error);
+        }
+        
     } );
     return instance;
 }
@@ -30,7 +51,7 @@
 
 + (void)writeObj:(__kindof AJDBObject *)obj
 {
-    RLMRealm *realm = [RLMRealm defaultRealm];
+    RLMRealm *realm = [self sharedInstance].realm;
     [realm beginWriteTransaction];
     [realm addOrUpdateObject:obj];
     [realm commitWriteTransaction];
@@ -38,7 +59,7 @@
 
 + (void)writeObjArray:(NSArray<__kindof AJDBObject *> *)objs
 {
-    RLMRealm *realm = [RLMRealm defaultRealm];
+    RLMRealm *realm = [self sharedInstance].realm;
     [realm beginWriteTransaction];
     [realm addOrUpdateObjectsFromArray:objs];
     [realm commitWriteTransaction];
@@ -48,7 +69,7 @@
 
 + (void)updateObj:(void (^)())updateBlock
 {
-    RLMRealm *realm = [RLMRealm defaultRealm];
+    RLMRealm *realm = [self sharedInstance].realm;
     
     [realm transactionWithBlock:^{
         updateBlock();
@@ -59,7 +80,7 @@
 
 + (void)deleteObj:(__kindof AJDBObject *)obj
 {
-    RLMRealm *realm = [RLMRealm defaultRealm];
+    RLMRealm *realm = [self sharedInstance].realm;
     [realm beginWriteTransaction];
     [realm deleteObject:obj];
     [realm commitWriteTransaction];
@@ -67,7 +88,7 @@
 
 + (void)deleteObjs:(NSArray<__kindof AJDBObject *> *)objs
 {
-    RLMRealm *realm = [RLMRealm defaultRealm];
+    RLMRealm *realm = [self sharedInstance].realm;
     [realm beginWriteTransaction];
     [realm deleteObjects:objs];
     [realm commitWriteTransaction];
@@ -79,7 +100,8 @@
 {
     [AJDBManager checkClazz:clazz];
     
-    RLMResults<AJDBObject *> *queryResult = [clazz allObjects];
+    RLMRealm *realm = [self sharedInstance].realm;
+    RLMResults<AJDBObject *> *queryResult = [clazz allObjectsInRealm:realm];
     NSMutableArray *resultArray = [NSMutableArray array];
     for (NSInteger i = 0; i < queryResult.count; i ++) {
         
@@ -95,7 +117,8 @@
 {
     [AJDBManager checkClazz:clazz];
     
-    RLMResults<AJDBObject *> *queryResult = [clazz objectsWithPredicate:predicate];
+    RLMRealm *realm = [self sharedInstance].realm;
+    RLMResults<AJDBObject *> *queryResult = [clazz objectsInRealm:realm withPredicate:predicate];
     NSMutableArray *resultArray = [NSMutableArray array];
     for (NSInteger i = 0; i < queryResult.count; i ++) {
         
@@ -111,7 +134,8 @@
 {
     [AJDBManager checkClazz:clazz];
     
-    RLMResults<AJDBObject *> *queryResult = [[clazz objectsWithPredicate:predicate]
+    RLMRealm *realm = [self sharedInstance].realm;
+    RLMResults<AJDBObject *> *queryResult = [[clazz objectsInRealm:realm withPredicate:predicate]
                                              sortedResultsUsingProperty:sortFilter.sortPropertyName
                                              ascending:sortFilter.ascending];
     
@@ -130,7 +154,8 @@
 {
     [AJDBManager checkClazz:clazz];
     
-    AJDBObject *queryObj = [clazz objectForPrimaryKey:primaryKey];
+    RLMRealm *realm = [self sharedInstance].realm;
+    AJDBObject *queryObj = [clazz objectInRealm:realm forPrimaryKey:primaryKey];
     
     return queryObj;
 }
@@ -138,7 +163,7 @@
 #pragma mark - 清空数据库
 + (void)clear
 {
-    RLMRealm *realm = [RLMRealm defaultRealm];
+    RLMRealm *realm = [self sharedInstance].realm;
     [realm beginWriteTransaction];
     [realm deleteAllObjects];
     [realm commitWriteTransaction];
